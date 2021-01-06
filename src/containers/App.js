@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import * as booksActions from '../actions/books';
 import App from '../components/App';
 import orderBy from 'lodash/orderBy';
+import description from "../reducers/description";
 
 const sortBy = (books, filterBy) => {
   switch (filterBy) {
@@ -30,9 +31,10 @@ const searchBooks = (books, filterBy, searchQuery) => {
   return sortBy(filterBooks(books, searchQuery), filterBy);
 };
 
-const mapStateToProps = ({ books, filter }) => ({
+const mapStateToProps = ({ books, filter, description }) => ({
   books: books.items && searchBooks(books.items, filter.filterBy, filter.searchQuery),
   isReady: books.isReady,
+  bId: description.bId
 });
 
 const mapDispatchToProps = dispatch => ({
