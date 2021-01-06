@@ -1,0 +1,20 @@
+.imageItem {
+    margin-right: .25em;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 500rem;
+    background: url("./../images/logo.jpg") center center no-repeat;
+}
+
+.crossCart{
+    width: 20px;
+    height:20px;
+}
+
+.textCart{
+    vertical-align: center;
+}
+.header{
+    height: 50px;
+}
