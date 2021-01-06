@@ -4,7 +4,7 @@ import ImageCard from "./ImageCard";
 import Cart from './../images/Cart.jpg'
 
 const BookCard = book => {
-  const { title, author, price, rating, image, addToCart, addedCount, setCardId } = book;
+  const { id, title, author, price, rating, image, addToCart, addedCount, setCardId } = book;
   return (
       <div className={s.linkCard}>
           <div className={s.titleBooks}>
@@ -18,7 +18,7 @@ const BookCard = book => {
                   <img src={Cart}/>{addedCount > 0 && `(${addedCount})`}
                   </a></div>
               <div>Оценка: {rating}</div>
-              <button onClick={setCardId}>Подробнее</button>
+              <button onClick={()=>setCardId(id)}>Подробнее</button>
           </div>
 </div>
   );
