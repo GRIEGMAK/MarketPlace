@@ -12,7 +12,7 @@ const App = (props) => {
         setBooks(await api_url.json());
     };
     useEffect(fetchBooks);
-    const {books, isReady} = props;
+    const {books, isReady, bId } = props;
     let booksId = undefined
     if (books) {
         const { id } = books
@@ -21,6 +21,7 @@ const App = (props) => {
     return (
         <div>
             <Menu/>
+            {bId}
             <Filter/>
             <BrowserRouter>
                 <Switch>
