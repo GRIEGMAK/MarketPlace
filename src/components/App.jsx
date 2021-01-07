@@ -2,7 +2,8 @@ import React, {useEffect} from 'react';
 import Filter from '../containers/Filter';
 import Menu from '../containers/Menu';
 import MainPart from "./MainPart";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import HomeScreen from "./HomeScreen";
 
 
 const App = (props) => {
@@ -13,11 +14,7 @@ const App = (props) => {
     };
     useEffect(fetchBooks);
     const {books, isReady, bId } = props;
-    let booksId = undefined
-    if (books) {
-        const { id } = books
-        booksId = "/" + id
-    }
+    let booksId = "/" + bId
     return (
         <div>
             <Menu/>
@@ -25,12 +22,16 @@ const App = (props) => {
             <Filter/>
             <BrowserRouter>
                 <Switch>
-                    <Route path="/">
+                    <Route path="/home">
+                        <HomeScreen />
+                    </Route>
+                    <Route path="/books">
                         <MainPart books={books} isReady={isReady}/>
                     </Route>
-                    <Route path={booksId}>
+                    <Route path={"/books/" + booksId}>
                         <h1>Hdkjnck</h1>
                     </Route>
+                    <Redirect from="/" to="/home" />
                 </Switch>
             </BrowserRouter>
         </div>
