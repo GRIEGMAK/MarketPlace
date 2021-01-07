@@ -1,0 +1,28 @@
+.homeScreen{
+    width: 105%;
+    height: 50px;
+    background-color: chocolate;
+    padding-left: 5%;
+}
+
+.logo{
+    color: azure;
+    vertical-align: center;
+    padding-top: 7px;
+}
+
+.books{
+    width: 105%;
+    height: 497px;
+    background-color:  darkolivegreen;
+    text-align: center;
+    padding-top: 150px;
+}
+.top{
+    width: 105%;
+    height: 50px;
+    background-color: darkkhaki;
+    text-align: right;
+    padding-right: 6%;
+    padding-top: 25px;
+}

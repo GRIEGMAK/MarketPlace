@@ -4,6 +4,7 @@ import Menu from '../containers/Menu';
 import MainPart from "./MainPart";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import HomeScreen from "./HomeScreen";
+import Description from "./../containers/Description";
 
 
 const App = (props) => {
@@ -14,22 +15,20 @@ const App = (props) => {
     };
     useEffect(fetchBooks);
     const {books, isReady, bId } = props;
-    let booksId = "/" + bId
     return (
         <div>
-            <Menu/>
-            {bId}
-            <Filter/>
             <BrowserRouter>
                 <Switch>
                     <Route path="/home">
                         <HomeScreen />
                     </Route>
-                    <Route path="/books">
+                    <Route exact path="/books">
+                        <Menu/>
+                        <Filter/>
                         <MainPart books={books} isReady={isReady}/>
                     </Route>
-                    <Route path={"/books/" + booksId}>
-                        <h1>Hdkjnck</h1>
+                    <Route exact path={"/books/"+ bId}>
+                        <Description books={books} isReady={isReady}/>
                     </Route>
                     <Redirect from="/" to="/home" />
                 </Switch>
