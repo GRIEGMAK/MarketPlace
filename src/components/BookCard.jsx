@@ -5,7 +5,10 @@ import Cart from './../images/Cart.jpg'
 import {NavLink} from "react-router-dom";
 
 const BookCard = book => {
-    const {id, title, author, price, rating, image, addToCart, addedCount, setCardId} = book;
+    const { id, title, author, price, rating, image, addToCart, addedCount, setCardId} = book;
+    const setBookCardId = (book) => {
+        setCardId(book.id)
+    }
     return (
         <div className={s.linkCard}>
             <div className={s.titleBooks}>
@@ -20,7 +23,7 @@ const BookCard = book => {
                     </a></div>
                 <div>Оценка: {rating}</div>
                 <NavLink to={"/books/" + id}>
-                    <button onClick={() => setCardId(id)}>
+                    <button onClick={() => setBookCardId(book)}>
                         Подробнее
                     </button>
                 </NavLink>

@@ -1,5 +1,6 @@
 const initialState = {
-    bId: undefined
+    bId: undefined,
+    book: undefined
 };
 
 export default (state = initialState, action) => {
@@ -9,6 +10,11 @@ export default (state = initialState, action) => {
                 ...state,
                 bId: action.payload
             };
+        case "SET_BOOK_CARD":
+            return {
+                ...state,
+                book: action.payload
+            }
         default:
             return state;
     }

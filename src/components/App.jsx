@@ -28,7 +28,7 @@ const App = (props) => {
                         <MainPart books={books} isReady={isReady}/>
                     </Route>
                     <Route exact path={"/books/"+ bId}>
-                        <Description books={books} isReady={isReady}/>
+                        <Description/>
                     </Route>
                     <Redirect from="/" to="/home" />
                 </Switch>

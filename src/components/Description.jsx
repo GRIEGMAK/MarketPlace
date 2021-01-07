@@ -1,12 +1,14 @@
 import React from 'react';
+import DetailScreen from "./DetailScreen";
 
 const Description = (props) => {
-    const { books, isReady } = props
+    const { books, bId } = props
+
     return (
         <div>
-            Описание книги
+            ghbdtyfgfhfghkljhgfx
         </div>
     )
-};
+}
 
 export default Description;

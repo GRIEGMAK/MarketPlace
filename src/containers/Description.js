@@ -3,9 +3,6 @@ import { bindActionCreators } from 'redux';
 import * as description from '../actions/description';
 import Description from '../components/Description';
 
-
-
-
 const mapStateToProps = (books, description) => ({
     books: books.items,
     isReady: books.isReady,
