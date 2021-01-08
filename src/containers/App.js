@@ -33,7 +33,8 @@ const searchBooks = (books, filterBy, searchQuery) => {
 const mapStateToProps = ({ books, filter, description }) => ({
   books: books.items && searchBooks(books.items, filter.filterBy, filter.searchQuery),
   isReady: books.isReady,
-  bId: description.bId
+  bId: description.bId,
+  book: description.book
 });
 
 const mapDispatchToProps = dispatch => ({

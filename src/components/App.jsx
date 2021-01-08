@@ -4,7 +4,7 @@ import Menu from '../containers/Menu';
 import MainPart from "./MainPart";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import HomeScreen from "./HomeScreen";
-import Description from "./../containers/Description";
+import Description from "./../components/Description";
 
 
 const App = (props) => {
@@ -14,7 +14,7 @@ const App = (props) => {
         setBooks(await api_url.json());
     };
     useEffect(fetchBooks);
-    const {books, isReady, bId } = props;
+    const {books, isReady, bId, book} = props;
     return (
         <div>
             <BrowserRouter>
@@ -28,7 +28,7 @@ const App = (props) => {
                         <MainPart books={books} isReady={isReady}/>
                     </Route>
                     <Route exact path={"/books/"+ bId}>
-                        <Description/>
+                        <Description book={book}/>
                     </Route>
                     <Redirect from="/" to="/home" />
                 </Switch>
