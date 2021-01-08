@@ -1,5 +1,7 @@
 .imageItem {
     border-radius: 10%;
+    width: 100%;
+    height:100%;
     background: url("./../images/logo.jpg") center center no-repeat;
 }
 .forImageItem {
@@ -7,8 +9,8 @@
     padding-bottom: 20px;
     padding-top: 10px;
     padding-left: 20px;
-    width: 300px;
-    height:450px;
+    width: 200px;
+    height:315px;
 }
 
 .homeScreen{
@@ -22,4 +24,9 @@
     color: azure;
     vertical-align: center;
     padding-top: 7px;
+}
+
+.containerItem{
+    display: grid;
+    grid-columns: 2;
 }
