@@ -1,0 +1,14 @@
+.header{
+    width: 105%;
+    height: 50px;
+    background-color: chocolate;
+    padding-left: 5%;
+    border-style: groove;
+    border-color: azure;
+}
+
+.logo{
+    color: azure;
+    vertical-align: center;
+    padding-top: 7px;
+}

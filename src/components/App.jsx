@@ -5,6 +5,7 @@ import MainPart from "./MainPart";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import HomeScreen from "./HomeScreen";
 import Description from "./../components/Description";
+import Top from "./Top";
 
 
 const App = (props) => {
@@ -26,6 +27,7 @@ const App = (props) => {
                         <Menu/>
                         <Filter/>
                         <MainPart books={books} isReady={isReady}/>
+                        <Top />
                     </Route>
                     <Route exact path={"/books/"+ bId}>
                         <Description book={book}/>

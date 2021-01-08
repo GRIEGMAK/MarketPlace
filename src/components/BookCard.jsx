@@ -18,7 +18,7 @@ const BookCard = book => {
             <div className={s.descBooks}>
                 <small><i>— {author}</i></small>
                 <ImageCard image={image}/>
-                <div className={s.imgStyles}>Цена: {price}р
+                <div className={s.imgStyles}>Цена: {price}₽
                     <a onClick={addToCart.bind(this, book)}>
                         <img src={Cart}/>{addedCount > 0 && `(${addedCount})`}
                     </a></div>

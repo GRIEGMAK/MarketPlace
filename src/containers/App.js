@@ -7,7 +7,7 @@ import orderBy from 'lodash/orderBy';
 const sortBy = (books, filterBy) => {
   switch (filterBy) {
     case 'popular':
-      return orderBy(books, 'rating', 'asc')
+      return orderBy(books, 'rating', 'desc')
     case 'price_high':
       return orderBy(books, 'price', 'desc');
     case 'price_low':
@@ -15,7 +15,7 @@ const sortBy = (books, filterBy) => {
     case 'author':
       return orderBy(books, 'author', 'asc');
     default:
-      return books;
+      return orderBy(books, 'title', 'asc');
   }
 };
 

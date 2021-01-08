@@ -1,0 +1,10 @@
+.top{
+    width: 105%;
+    height: 50px;
+    background-color: darkkhaki;
+    text-align: right;
+    padding-right: 6%;
+    padding-top: 25px;
+    border-style: groove;
+    border-color: azure;
+}

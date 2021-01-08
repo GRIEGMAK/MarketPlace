@@ -2,6 +2,7 @@ import React from "react";
 import { Popup } from "semantic-ui-react";
 import cross from "./../images/cross.jpg"
 import s from "../styles/CartComponent.module.css"
+import Header from "./Header";
 
 const CartComponent = ({title, id, image, removeFromCart}) => {
     return (<div className={s.textCart}>
@@ -15,8 +16,11 @@ const CartComponent = ({title, id, image, removeFromCart}) => {
 }
 
 const MenuComponent = ({totalPrice, count, items}) => {
-    return (<div className={s.header}>Магазин книг
-            Итого: {totalPrice}руб.
+    return (
+        <div>
+            <Header />
+            <div className={s.header}>
+            Итого: {totalPrice} ₽ &nbsp;
             <Popup
                 trigger={
                     <div>
@@ -29,7 +33,7 @@ const MenuComponent = ({totalPrice, count, items}) => {
                 on="click"
                 hideOnScroll
             />
-        </div>
+        </div></div>
     )
 }
 
