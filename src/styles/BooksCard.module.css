@@ -16,14 +16,25 @@
     height: 80px;
     padding-top: 10px;
     text-align: center;
-    vertical-align: center;
 }
 
 .descBooks {
     text-align: center;
 }
 
+.imgStyles {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
 .imgStyles img {
     width: 20px;
     height: 20px;
+}
+
+.cAddToCart {
+    width: 40px;
+    height: 22px;
+    background-color: aliceblue;
 }

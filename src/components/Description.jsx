@@ -1,15 +1,16 @@
 import React from 'react';
 import s from "./../styles/Description.module.css"
-import Header from "./Header";
-import Top from "./Top";
+import cross from "./../images/cross.jpg"
+import {NavLink} from "react-router-dom";
 
 const Description = (props) => {
     const {book} = props
-    const {image, price, rating, title, author, description } = book
+    const {image, price, rating, title, author, description, addToCart, addedCount } = book
     console.log(book)
     return (
         <div>
-            <Header />
+            <NavLink to="/books/"><img className={s.cross} src={cross}/></NavLink>
+            <hr/>
             <div className={s.containerItems}>
             <div className={s.forImageItem}>
                 <img src={image} className={s.imageItem}/>
@@ -22,14 +23,13 @@ const Description = (props) => {
                     {description}
                 </div>
                 <div className={s.price}>
-                    Цена: {price}₽
+                    Цена: {price}₽ <button onClick={() => addToCart(book)}>Добавить в корзину {addedCount > 0 && `(${addedCount})`}</button>
                 </div>
                 <div className={s.rating}>
                 Общая оценка пользователей: {rating}
                 </div>
             </div>
             </div>
-            <Top />
         </div>
     )
 }

@@ -13,10 +13,26 @@
 }
 
 .textCart{
-    vertical-align: center;
+    display: flex;
+    flex-direction: row;
+    border-color: yellow;
+    border-style: groove;
 }
 .header{
     height: 50px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.titleCart{
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.crossCart{
+    display: flex;
+    justify-content: center
 }
